@@ -1,7 +1,12 @@
-import { EjemploProps1, EjemploProps2, EjemploProps3 } from "../components/Props";
+import { EjemploProps1, EjemploProps2, EjemploProps3, EjemploProps4, EjemploProps5 } from "../components/Props";
 const nombre2 = 'Javier';
 const frutas =['manzana','banana','palta','sandia']
 const verduras =['acelga','espinaca','zanahoria','tomate']
+
+const mostrarValor = valor =>{
+    console.log(valor)
+}
+
 
 const Ejemplo01 = (props) => {
 
@@ -19,6 +24,12 @@ const Ejemplo01 = (props) => {
 
             {/* Múltiples propiedades y destructing */}
             <EjemploProps3 titulo="Fútbol Messi" subtitulo="8vo balón de oro" cuerpo="Lo hizo nuevamente, sas ffe fd sas a ds df sd s d sd" />
+
+            {/* Si o sí necesita pasarle un manejador (mostrarvalor - línea 6), sino daría errores */}
+            <EjemploProps4 cambiarValor={mostrarValor} />
+
+            <EjemploProps5 eventoClick={mostrarValor} />
+
         </div>
     )
 }
